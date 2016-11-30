@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		107990441DEE6545002A727E /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 107990431DEE6545002A727E /* BaseNavigationController.m */; };
+		107990471DEE664D002A727E /* MainPage.html in Resources */ = {isa = PBXBuildFile; fileRef = 107990461DEE664D002A727E /* MainPage.html */; };
+		1079904D1DEE6806002A727E /* KSWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1079904A1DEE6806002A727E /* KSWaitingView.m */; };
+		1079904E1DEE6806002A727E /* ListSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1079904C1DEE6806002A727E /* ListSelectView.m */; };
+		107990521DEE7625002A727E /* Command.m in Sources */ = {isa = PBXBuildFile; fileRef = 107990511DEE7625002A727E /* Command.m */; };
+		107990551DEE765E002A727E /* NSData+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 107990541DEE765E002A727E /* NSData+Hex.m */; };
+		107990581DEE8135002A727E /* NFCCardReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 107990571DEE8135002A727E /* NFCCardReader.m */; };
 		10A20C351DED7949008D34F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A20C341DED7949008D34F2 /* main.m */; };
 		10A20C381DED7949008D34F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A20C371DED7949008D34F2 /* AppDelegate.m */; };
-		10A20C3B1DED7949008D34F2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A20C3A1DED7949008D34F2 /* ViewController.m */; };
+		10A20C3B1DED7949008D34F2 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A20C3A1DED7949008D34F2 /* MainViewController.m */; };
 		10A20C3E1DED7949008D34F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10A20C3C1DED7949008D34F2 /* Main.storyboard */; };
 		10A20C401DED7949008D34F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10A20C3F1DED7949008D34F2 /* Assets.xcassets */; };
 		10A20C431DED7949008D34F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10A20C411DED7949008D34F2 /* LaunchScreen.storyboard */; };
@@ -18,12 +25,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		107990421DEE6545002A727E /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		107990431DEE6545002A727E /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		107990451DEE65AB002A727E /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		107990461DEE664D002A727E /* MainPage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = MainPage.html; sourceTree = "<group>"; };
+		107990491DEE6806002A727E /* KSWaitingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KSWaitingView.h; path = CustomView/KSWaitingView.h; sourceTree = "<group>"; };
+		1079904A1DEE6806002A727E /* KSWaitingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KSWaitingView.m; path = CustomView/KSWaitingView.m; sourceTree = "<group>"; };
+		1079904B1DEE6806002A727E /* ListSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListSelectView.h; path = CustomView/ListSelectView.h; sourceTree = "<group>"; };
+		1079904C1DEE6806002A727E /* ListSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListSelectView.m; path = CustomView/ListSelectView.m; sourceTree = "<group>"; };
+		1079904F1DEE6FF8002A727E /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		107990501DEE7625002A727E /* Command.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Command.h; sourceTree = "<group>"; };
+		107990511DEE7625002A727E /* Command.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Command.m; sourceTree = "<group>"; };
+		107990531DEE765E002A727E /* NSData+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Hex.h"; sourceTree = "<group>"; };
+		107990541DEE765E002A727E /* NSData+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Hex.m"; sourceTree = "<group>"; };
+		107990561DEE8135002A727E /* NFCCardReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFCCardReader.h; sourceTree = "<group>"; };
+		107990571DEE8135002A727E /* NFCCardReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFCCardReader.m; sourceTree = "<group>"; };
 		10A20C301DED7949008D34F2 /* TPNFCReaderPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TPNFCReaderPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A20C341DED7949008D34F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10A20C361DED7949008D34F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		10A20C371DED7949008D34F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		10A20C391DED7949008D34F2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		10A20C3A1DED7949008D34F2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		10A20C391DED7949008D34F2 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		10A20C3A1DED7949008D34F2 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		10A20C3D1DED7949008D34F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		10A20C3F1DED7949008D34F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10A20C421DED7949008D34F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +73,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		107990481DEE67F1002A727E /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				107990491DEE6806002A727E /* KSWaitingView.h */,
+				1079904A1DEE6806002A727E /* KSWaitingView.m */,
+				1079904B1DEE6806002A727E /* ListSelectView.h */,
+				1079904C1DEE6806002A727E /* ListSelectView.m */,
+			);
+			name = CustomView;
+			sourceTree = "<group>";
+		};
 		10A20C271DED7949008D34F2 = {
 			isa = PBXGroup;
 			children = (
@@ -72,12 +105,19 @@
 		10A20C321DED7949008D34F2 /* TPNFCReaderPro */ = {
 			isa = PBXGroup;
 			children = (
+				107990481DEE67F1002A727E /* CustomView */,
 				10A20C511DED809C008D34F2 /* Config */,
 				10A20C4A1DED7FE2008D34F2 /* Library */,
+				107990501DEE7625002A727E /* Command.h */,
+				107990511DEE7625002A727E /* Command.m */,
+				107990561DEE8135002A727E /* NFCCardReader.h */,
+				107990571DEE8135002A727E /* NFCCardReader.m */,
+				107990421DEE6545002A727E /* BaseNavigationController.h */,
+				107990431DEE6545002A727E /* BaseNavigationController.m */,
 				10A20C361DED7949008D34F2 /* AppDelegate.h */,
 				10A20C371DED7949008D34F2 /* AppDelegate.m */,
-				10A20C391DED7949008D34F2 /* ViewController.h */,
-				10A20C3A1DED7949008D34F2 /* ViewController.m */,
+				10A20C391DED7949008D34F2 /* MainViewController.h */,
+				10A20C3A1DED7949008D34F2 /* MainViewController.m */,
 				10A20C3C1DED7949008D34F2 /* Main.storyboard */,
 				10A20C3F1DED7949008D34F2 /* Assets.xcassets */,
 				10A20C411DED7949008D34F2 /* LaunchScreen.storyboard */,
@@ -90,6 +130,7 @@
 		10A20C331DED7949008D34F2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				107990461DEE664D002A727E /* MainPage.html */,
 				10A20C341DED7949008D34F2 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -98,6 +139,8 @@
 		10A20C4A1DED7FE2008D34F2 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				107990531DEE765E002A727E /* NSData+Hex.h */,
+				107990541DEE765E002A727E /* NSData+Hex.m */,
 				10A20C4B1DED8025008D34F2 /* TaPassSDK(IOS) */,
 			);
 			name = Library;
@@ -117,6 +160,8 @@
 		10A20C511DED809C008D34F2 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				1079904F1DEE6FF8002A727E /* Header.h */,
+				107990451DEE65AB002A727E /* Macros.h */,
 				10A20C521DED80BB008D34F2 /* PrefixHeader.pch */,
 			);
 			name = Config;
@@ -201,6 +246,7 @@
 			files = (
 				10A20C431DED7949008D34F2 /* LaunchScreen.storyboard in Resources */,
 				10A20C401DED7949008D34F2 /* Assets.xcassets in Resources */,
+				107990471DEE664D002A727E /* MainPage.html in Resources */,
 				10A20C3E1DED7949008D34F2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,9 +306,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10A20C3B1DED7949008D34F2 /* ViewController.m in Sources */,
+				1079904D1DEE6806002A727E /* KSWaitingView.m in Sources */,
+				107990441DEE6545002A727E /* BaseNavigationController.m in Sources */,
+				107990551DEE765E002A727E /* NSData+Hex.m in Sources */,
+				1079904E1DEE6806002A727E /* ListSelectView.m in Sources */,
+				10A20C3B1DED7949008D34F2 /* MainViewController.m in Sources */,
+				107990581DEE8135002A727E /* NFCCardReader.m in Sources */,
 				10A20C381DED7949008D34F2 /* AppDelegate.m in Sources */,
 				10A20C351DED7949008D34F2 /* main.m in Sources */,
+				107990521DEE7625002A727E /* Command.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +428,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = TPNFCReaderPro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -394,6 +447,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = TPNFCReaderPro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
