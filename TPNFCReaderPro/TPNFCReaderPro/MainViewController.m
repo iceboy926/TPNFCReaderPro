@@ -151,7 +151,7 @@
     }
     else
     {
-        [self showAlert:@"未连接到蓝牙设备"];
+        [self showAlert:@"未连接到蓝牙设备，请先连接蓝牙设备"];
     }
 }
 

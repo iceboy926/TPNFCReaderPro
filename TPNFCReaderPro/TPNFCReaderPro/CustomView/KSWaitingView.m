@@ -8,7 +8,7 @@
 
 #import "KSWaitingView.h"
 #import "NSData+Hex.h"
-#import "Command.h"
+#import "CommandAPDU.h"
 
 #define KSMessageBoxFrame CGRectMake(0.0f, 0.0f, 280.0f, 180.0f)
 
@@ -162,11 +162,11 @@
             
             if (cardType == TPS_CARD_TYPE_A)
             {
-                [self.CardReader SendAPDU:[[Command shareInstance] getSelectMainFileCmdByte] completion:^(BOOL blSuccess, NSData *responseData){
+                [self.CardReader SendAPDU:[[CommandAPDU shareInstance] getSelectMainFileCmdByte] completion:^(BOOL blSuccess, NSData *responseData){
                     
                         if(blSuccess)
                         {
-                            [self.CardReader SendAPDU:[[Command shareInstance] readCmdByte] completion:^(BOOL isCmdRunSuc, NSData *apduRtnData){
+                            [self.CardReader SendAPDU:[[CommandAPDU shareInstance] readCmdByte] completion:^(BOOL isCmdRunSuc, NSData *apduRtnData){
                                 
                                 if(isCmdRunSuc)
                                 {
@@ -175,14 +175,14 @@
                                     
                                     NSLog(@" read out data is %@", strOut);
                                     
-                                    NSData *dataSend = [[Command shareInstance] writeCmdByteWithString:self.strInputData];
+                                    NSData *dataSend = [[CommandAPDU shareInstance] writeCmdByteWithString:self.strInputData];
                                     
                                     [self.CardReader SendAPDU:dataSend completion:^(BOOL isCmdRunSuc, NSData *apduRtnData){
                                         
                                         if(isCmdRunSuc)
                                         {
                                             
-                                            [self.CardReader SendAPDU:[[Command shareInstance] readCmdByte] completion:^(BOOL isCmdRunSuc, NSData *apduRtnData){
+                                            [self.CardReader SendAPDU:[[CommandAPDU shareInstance] readCmdByte] completion:^(BOOL isCmdRunSuc, NSData *apduRtnData){
                                                 
                                                 
                                                 NSString *strOut = [apduRtnData hexadecimalString];

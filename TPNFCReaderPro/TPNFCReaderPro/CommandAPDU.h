@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Command : NSObject
+@interface CommandAPDU : NSObject
 
 +(instancetype)shareInstance;
 

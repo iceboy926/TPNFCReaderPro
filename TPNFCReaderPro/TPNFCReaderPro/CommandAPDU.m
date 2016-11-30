@@ -6,78 +6,22 @@
 //  Copyright © 2016年 Lochy. All rights reserved.
 //
 
-#import "Command.h"
+#import "CommandAPDU.h"
 #import "NSData+Hex.h"
 
 
 static unsigned char ucData[1024];  //发送数据
 static unsigned long ucDataLenth;  //发送数据的长度
 
-@interface Command()
+@interface CommandAPDU()
 
 @end
 
-@implementation Command
-
-
-//typedef  unsigned int DWORD;
-//DWORD AscToHex(char *Dest,char *Src,DWORD SrcLen)
-//{
-//    DWORD i;
-//    for ( i = 0; i < SrcLen; i ++ )
-//    {
-//        sprintf(Dest + i * 2,"%02X",(unsigned char)Src[i]);
-//    }
-//    Dest[i * 2] = 0;
-//    return 2*SrcLen;
-//}
-//
-//DWORD HexToAsc(char *pDst, char *pSrc, DWORD nSrcLen)
-//{
-//    for(DWORD i=0; i<nSrcLen; i+=2)
-//    {
-//        //输出高4位
-//        if(*pSrc>='0' && *pSrc<='9')
-//        {
-//            *pDst = (*pSrc - '0') << 4;
-//        }
-//        else if(*pSrc>='A' && *pSrc<='F')
-//        {
-//            *pDst = (*pSrc - 'A' + 10) << 4;
-//        }
-//        else
-//        {
-//            *pDst = (*pSrc - 'a' + 10) << 4;
-//        }
-//        
-//        pSrc++;
-//        
-//        // 输出低4位
-//        if(*pSrc>='0' && *pSrc<='9')
-//        {
-//            *pDst |= *pSrc - '0';
-//        }
-//        else if(*pSrc>='A' && *pSrc<='F')
-//        {
-//            *pDst |= *pSrc - 'A' + 10;
-//        }
-//        else
-//        {
-//            *pDst |= *pSrc - 'a' + 10;
-//        }
-//        
-//        pSrc++;
-//        pDst++;
-//    }
-//    //返回目标数据长度
-//    return nSrcLen / 2;
-//}
-//
-//
+@implementation CommandAPDU
 
 +(instancetype)shareInstance
 {
-    static Command *commandInstance;
+    static CommandAPDU *commandInstance;
     
     static dispatch_once_t once_t;
     
@@ -85,7 +29,7 @@ static unsigned long ucDataLenth;  //发送数据的长度
     
         if(commandInstance == nil)
         {
-            commandInstance = [[Command alloc] init];
+            commandInstance = [[CommandAPDU alloc] init];
             
         }
     
@@ -95,7 +39,7 @@ static unsigned long ucDataLenth;  //发送数据的长度
 }
 
 
-//清空数组
+//清空数据
 -(void)clear
 {
     memset(ucData,'\0', 1024);
@@ -110,7 +54,7 @@ static unsigned long ucDataLenth;  //发送数据的长度
 }
 
 
-//00A404000701020304050607
+// select file
 -(NSData *)getSelectMainFileCmdByte{
     
     Byte bytes[] = {0x00, (Byte)0xa4, 0x04, 0x00, 0x07, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07};
@@ -134,7 +78,7 @@ static unsigned long ucDataLenth;  //发送数据的长度
     return [NSData dataWithBytes:ucData length:ucDataLenth];
 }
 
-//
+// read data
 
 -(NSData *)readCmdByte
 {
@@ -159,9 +103,8 @@ static unsigned long ucDataLenth;  //发送数据的长度
     return [NSData dataWithBytes:ucData length:ucDataLenth];
 }
 
-//000100001E 687474703A2F2F636172742E6A642E636F6D2F636172742E616374696F6E //write
-//0002000000 //read URL
 
+//write data
 -(NSData *)writeCmdByteWithString:(NSString *)strData
 {
     Byte byte[128] = {0x00};
@@ -194,6 +137,7 @@ static unsigned long ucDataLenth;  //发送数据的长度
     
     return [NSData dataWithBytes:ucData length:ucDataLenth];
 }
+
 
 -(unsigned char)LRC_Check:(unsigned char[])data dataLen:(unsigned long)length
 {

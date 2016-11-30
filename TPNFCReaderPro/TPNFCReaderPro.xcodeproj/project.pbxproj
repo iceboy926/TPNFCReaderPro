@@ -11,7 +11,7 @@
 		107990471DEE664D002A727E /* MainPage.html in Resources */ = {isa = PBXBuildFile; fileRef = 107990461DEE664D002A727E /* MainPage.html */; };
 		1079904D1DEE6806002A727E /* KSWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1079904A1DEE6806002A727E /* KSWaitingView.m */; };
 		1079904E1DEE6806002A727E /* ListSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1079904C1DEE6806002A727E /* ListSelectView.m */; };
-		107990521DEE7625002A727E /* Command.m in Sources */ = {isa = PBXBuildFile; fileRef = 107990511DEE7625002A727E /* Command.m */; };
+		107990521DEE7625002A727E /* CommandAPDU.m in Sources */ = {isa = PBXBuildFile; fileRef = 107990511DEE7625002A727E /* CommandAPDU.m */; };
 		107990551DEE765E002A727E /* NSData+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 107990541DEE765E002A727E /* NSData+Hex.m */; };
 		107990581DEE8135002A727E /* NFCCardReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 107990571DEE8135002A727E /* NFCCardReader.m */; };
 		10A20C351DED7949008D34F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A20C341DED7949008D34F2 /* main.m */; };
@@ -34,8 +34,8 @@
 		1079904B1DEE6806002A727E /* ListSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListSelectView.h; path = CustomView/ListSelectView.h; sourceTree = "<group>"; };
 		1079904C1DEE6806002A727E /* ListSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListSelectView.m; path = CustomView/ListSelectView.m; sourceTree = "<group>"; };
 		1079904F1DEE6FF8002A727E /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
-		107990501DEE7625002A727E /* Command.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Command.h; sourceTree = "<group>"; };
-		107990511DEE7625002A727E /* Command.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Command.m; sourceTree = "<group>"; };
+		107990501DEE7625002A727E /* CommandAPDU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandAPDU.h; sourceTree = "<group>"; };
+		107990511DEE7625002A727E /* CommandAPDU.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandAPDU.m; sourceTree = "<group>"; };
 		107990531DEE765E002A727E /* NSData+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Hex.h"; sourceTree = "<group>"; };
 		107990541DEE765E002A727E /* NSData+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Hex.m"; sourceTree = "<group>"; };
 		107990561DEE8135002A727E /* NFCCardReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFCCardReader.h; sourceTree = "<group>"; };
@@ -108,8 +108,8 @@
 				107990481DEE67F1002A727E /* CustomView */,
 				10A20C511DED809C008D34F2 /* Config */,
 				10A20C4A1DED7FE2008D34F2 /* Library */,
-				107990501DEE7625002A727E /* Command.h */,
-				107990511DEE7625002A727E /* Command.m */,
+				107990501DEE7625002A727E /* CommandAPDU.h */,
+				107990511DEE7625002A727E /* CommandAPDU.m */,
 				107990561DEE8135002A727E /* NFCCardReader.h */,
 				107990571DEE8135002A727E /* NFCCardReader.m */,
 				107990421DEE6545002A727E /* BaseNavigationController.h */,
@@ -314,7 +314,7 @@
 				107990581DEE8135002A727E /* NFCCardReader.m in Sources */,
 				10A20C381DED7949008D34F2 /* AppDelegate.m in Sources */,
 				10A20C351DED7949008D34F2 /* main.m in Sources */,
-				107990521DEE7625002A727E /* Command.m in Sources */,
+				107990521DEE7625002A727E /* CommandAPDU.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
