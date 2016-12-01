@@ -120,6 +120,13 @@
         self.completionBlock(NO, peripheral);
     }
 }
+-(void) onReceiveConnectDeviceFailed:(NSError*)error
+{
+    if(self.completionBlock)
+    {
+        self.completionBlock(NO, NULL);
+    }
+}
 
 -(void) onReceiveScanPeripheral:(CBPeripheral *)peripheral {
     

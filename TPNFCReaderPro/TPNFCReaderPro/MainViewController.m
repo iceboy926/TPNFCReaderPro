@@ -115,7 +115,7 @@
             }
             else
             {
-                [weakself showAlert:@"连接设备失败"];
+                [weakself showAlert:@"设备断开连接"];
             }
             
         });
