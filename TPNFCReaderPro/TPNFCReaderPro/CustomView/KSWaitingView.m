@@ -162,28 +162,38 @@
             
             if (cardType == TPS_CARD_TYPE_A)
             {
-                [self.CardReader SendAPDU:[[CommandAPDU shareInstance] getSelectMainFileCmdByte] completion:^(BOOL blSuccess, NSData *responseData){
+                [weakself.CardReader SendAPDU:[[CommandAPDU shareInstance] getSelectMainFileCmdByte] completion:^(BOOL blSuccess, NSData *responseData){
                     
-                        if(blSuccess)
+                    NSString *strResponseData = [responseData hexadecimalString];
+                    
+                        if(blSuccess && [strResponseData isEqualToString:@"9000"])
                         {
-                            [self.CardReader SendAPDU:[[CommandAPDU shareInstance] readCmdByte] completion:^(BOOL isCmdRunSuc, NSData *apduRtnData){
+                            [weakself.CardReader SendAPDU:[[CommandAPDU shareInstance] readCmdByte] completion:^(BOOL isCmdRunSuc, NSData *apduRtnData){
                                 
-                                if(isCmdRunSuc)
+                                NSString *strRtnData = [apduRtnData hexadecimalString];
+                                
+                                
+                                if(isCmdRunSuc && [strRtnData hasSuffix:@"9000"])
                                 {
                                     
-                                    NSData *dataSend = [[CommandAPDU shareInstance] writeCmdByteWithString:self.strInputData];
+                                    NSData *dataSend = [[CommandAPDU shareInstance] writeCmdByteWithString:weakself.strInputData];
                                     
-                                    [self.CardReader SendAPDU:dataSend completion:^(BOOL isCmdRunSuc, NSData *apduRtnData){
+                                    [weakself.CardReader SendAPDU:dataSend completion:^(BOOL isCmdRunSuc, NSData *apduRtnData){
                                         
-                                        if(isCmdRunSuc)
+                                        NSString *strApduRtnData = [apduRtnData hexadecimalString];
+                                        
+                                        if(isCmdRunSuc && [strApduRtnData isEqualToString:@"9000"])
                                         {
                                             
-                                            [self.CardReader SendAPDU:[[CommandAPDU shareInstance] readCmdByte] completion:^(BOOL isCmdRunSuc, NSData *apduRtnData){
+                                            [weakself.CardReader SendAPDU:[[CommandAPDU shareInstance] readCmdByte] completion:^(BOOL isCmdRunSuc, NSData *apduRtnData){
                                                 
                                                 
                                                 NSString *strOut = [apduRtnData hexadecimalString];
                                                 
                                                 NSLog(@" TPS_CARD_TYPE_A read out data is %@", strOut);
+                                                
+                                                if(isCmdRunSuc && [strOut hasSuffix:@"9000"])
+                                                {
                                                 
                                                 int len = strOut.length - 4;
                                                 
@@ -199,7 +209,7 @@
                                                 
                                                 
                                                 
-                                                [self.CardReader closeCard];
+                                                [weakself.CardReader closeCard];
                                                 
                                                 [_indicator stopAnimating];
                                                 [_timer invalidate];
@@ -208,13 +218,14 @@
                                                 
                                                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                                                 
-                                                    [weakself hide];
+                                                    __strong KSWaitingView *strongself = weakself;
                                                     
-                                                    if(weakself.CardReaderCompletionBlock)
-                                                    {
-                                                        weakself.CardReaderCompletionBlock(strurl);
-                                                    }
-                                                });
+                                                        if(strongself.CardReaderCompletionBlock)
+                                                        {
+                                                            strongself.CardReaderCompletionBlock(strurl);
+                                                        }
+                                                    });
+                                                }
                                             }];
                                         }
                                         

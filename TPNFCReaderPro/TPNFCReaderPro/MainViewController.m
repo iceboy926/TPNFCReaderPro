@@ -141,9 +141,12 @@
         
         [self.waitingView show];
         
+        WEAK_SELF(weakself)
         self.waitingView.CardReaderCompletionBlock = ^(NSString *strURL){
             
-            NSLog(@"out data is %@", strURL);
+            [weakself.waitingView hide];
+            
+            NSLog(@"CardReaderCompletionBlock out data is %@", strURL);
             
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:strURL]];
             
