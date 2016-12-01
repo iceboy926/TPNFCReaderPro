@@ -38,16 +38,8 @@
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5*NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
-//            if([self.bleManager isConnect])
-//            {
-//                [self.bleManager cancelConnect];
-//                
-//                [self scanDevice];
-//            }
-//            else
-//            {
-//                [self scanDevice];
-//            }
+            [self stopscanDevice];
+            [self scanDevice];
         });
     }
     return self;
@@ -98,19 +90,22 @@
 
 -(void) onManagerStateReady:(BOOL)isReady  // 设备就绪
 {
+    
     if(isReady)
     {
-        [self scanDevice];
+        NSLog(@"onManagerStateReady");
+        //[self scanDevice];
     }
 }
 
 -(void) onScanPeripheralStopped
 {
-    
+    NSLog(@"onScanPeripheralStopped");
 }
 
 -(void) onReceiveConnectDevice:(TPSDeviceManager*)manager peripheral:(CBPeripheral*)peripheral
 {
+    NSLog(@"onReceiveConnectDevice");
     if(self.completionBlock)
     {
         self.completionBlock(YES, peripheral);
@@ -119,6 +114,7 @@
 
 -(void) onReceiveDisconnectDevice:(TPSDeviceManager*)manager peripheral:(CBPeripheral*)peripheral
 {
+    NSLog(@"onReceiveDisconnectDevice");
     if(self.completionBlock)
     {
         self.completionBlock(NO, peripheral);

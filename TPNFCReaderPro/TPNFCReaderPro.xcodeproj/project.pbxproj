@@ -21,6 +21,7 @@
 		10A20C401DED7949008D34F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10A20C3F1DED7949008D34F2 /* Assets.xcassets */; };
 		10A20C431DED7949008D34F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10A20C411DED7949008D34F2 /* LaunchScreen.storyboard */; };
 		10A20C501DED803F008D34F2 /* libTapassSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A20C4C1DED803F008D34F2 /* libTapassSDK.a */; };
+		10BAE3461DEFBB6800274877 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BAE3451DEFBB6800274877 /* CoreBluetooth.framework */; };
 		983FD749D175362EF29F323D /* libPods-TPNFCReaderPro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B000F7C34AD9BC124A86962 /* libPods-TPNFCReaderPro.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		10A20C4E1DED803F008D34F2 /* TPSDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPSDeviceManager.h; path = "Library/TapassSDK(iOS)/TPSDeviceManager.h"; sourceTree = "<group>"; };
 		10A20C4F1DED803F008D34F2 /* ZqsCommonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZqsCommonUtil.h; path = "Library/TapassSDK(iOS)/ZqsCommonUtil.h"; sourceTree = "<group>"; };
 		10A20C521DED80BB008D34F2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		10BAE3451DEFBB6800274877 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		4B000F7C34AD9BC124A86962 /* libPods-TPNFCReaderPro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TPNFCReaderPro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BA7AA3B41C476EA67F4643B /* Pods-TPNFCReaderPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TPNFCReaderPro.release.xcconfig"; path = "Pods/Target Support Files/Pods-TPNFCReaderPro/Pods-TPNFCReaderPro.release.xcconfig"; sourceTree = "<group>"; };
 		C71512564E0B9406E5856B79 /* Pods-TPNFCReaderPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TPNFCReaderPro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TPNFCReaderPro/Pods-TPNFCReaderPro.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10BAE3461DEFBB6800274877 /* CoreBluetooth.framework in Frameworks */,
 				10A20C501DED803F008D34F2 /* libTapassSDK.a in Frameworks */,
 				983FD749D175362EF29F323D /* libPods-TPNFCReaderPro.a in Frameworks */,
 			);
@@ -170,6 +173,7 @@
 		49D756A312E6998B5460E98E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				10BAE3451DEFBB6800274877 /* CoreBluetooth.framework */,
 				4B000F7C34AD9BC124A86962 /* libPods-TPNFCReaderPro.a */,
 			);
 			name = Frameworks;

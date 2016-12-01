@@ -119,7 +119,7 @@
     
     [_indicator startAnimating];
 
-     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(refresh:) userInfo:nil repeats:YES];
+     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.8f target:self selector:@selector(refresh:) userInfo:nil repeats:YES];
 }
 
 -(void)hide
@@ -170,10 +170,6 @@
                                 
                                 if(isCmdRunSuc)
                                 {
-                                    
-                                    NSString *strOut = [apduRtnData hexadecimalString];
-                                    
-                                    NSLog(@" read out data is %@", strOut);
                                     
                                     NSData *dataSend = [[CommandAPDU shareInstance] writeCmdByteWithString:self.strInputData];
                                     

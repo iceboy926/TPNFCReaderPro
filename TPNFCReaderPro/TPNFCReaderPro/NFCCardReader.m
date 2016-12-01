@@ -64,10 +64,18 @@
 
 -(void) onReceiveRfmSearchCard:(Boolean)blnIsSuc csn:(NSData *)cardSn ats:(NSData *)cardATS cardType:(Byte)cardType
 {
-    NSLog(@" onReceiveRfmSearchCard cardsn is %@", cardSn);
-    if(self.searchCardblock)
+    
+    if(blnIsSuc)
     {
-        self.searchCardblock(blnIsSuc, cardSn, cardATS, cardType);
+        NSLog(@" onReceiveRfmSearchCard  success cardsn is %@", cardSn);
+        if(self.searchCardblock)
+        {
+            self.searchCardblock(blnIsSuc, cardSn, cardATS, cardType);
+        }
+    }
+    else
+    {
+        NSLog(@" onReceiveRfmSearchCard  failed");
     }
 }
 
