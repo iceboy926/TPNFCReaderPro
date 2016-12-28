@@ -14,6 +14,7 @@
 		107990521DEE7625002A727E /* CommandAPDU.m in Sources */ = {isa = PBXBuildFile; fileRef = 107990511DEE7625002A727E /* CommandAPDU.m */; };
 		107990551DEE765E002A727E /* NSData+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 107990541DEE765E002A727E /* NSData+Hex.m */; };
 		107990581DEE8135002A727E /* NFCCardReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 107990571DEE8135002A727E /* NFCCardReader.m */; };
+		108E30CB1DF95B5000D4EEC6 /* LoggerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 108E30C81DF95B5000D4EEC6 /* LoggerClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		10A20C351DED7949008D34F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A20C341DED7949008D34F2 /* main.m */; };
 		10A20C381DED7949008D34F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A20C371DED7949008D34F2 /* AppDelegate.m */; };
 		10A20C3B1DED7949008D34F2 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A20C3A1DED7949008D34F2 /* MainViewController.m */; };
@@ -41,6 +42,10 @@
 		107990541DEE765E002A727E /* NSData+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Hex.m"; sourceTree = "<group>"; };
 		107990561DEE8135002A727E /* NFCCardReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFCCardReader.h; sourceTree = "<group>"; };
 		107990571DEE8135002A727E /* NFCCardReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFCCardReader.m; sourceTree = "<group>"; };
+		108E30C71DF95B5000D4EEC6 /* LoggerClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoggerClient.h; path = Library/NSLogger/LoggerClient.h; sourceTree = "<group>"; };
+		108E30C81DF95B5000D4EEC6 /* LoggerClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoggerClient.m; path = Library/NSLogger/LoggerClient.m; sourceTree = "<group>"; };
+		108E30C91DF95B5000D4EEC6 /* LoggerCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoggerCommon.h; path = Library/NSLogger/LoggerCommon.h; sourceTree = "<group>"; };
+		108E30CA1DF95B5000D4EEC6 /* NSLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSLogger.h; path = Library/NSLogger/NSLogger.h; sourceTree = "<group>"; };
 		10A20C301DED7949008D34F2 /* TPNFCReaderPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TPNFCReaderPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A20C341DED7949008D34F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10A20C361DED7949008D34F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,6 +90,17 @@
 				1079904C1DEE6806002A727E /* ListSelectView.m */,
 			);
 			name = CustomView;
+			sourceTree = "<group>";
+		};
+		108E30C61DF95B4000D4EEC6 /* NSLogger */ = {
+			isa = PBXGroup;
+			children = (
+				108E30C71DF95B5000D4EEC6 /* LoggerClient.h */,
+				108E30C81DF95B5000D4EEC6 /* LoggerClient.m */,
+				108E30C91DF95B5000D4EEC6 /* LoggerCommon.h */,
+				108E30CA1DF95B5000D4EEC6 /* NSLogger.h */,
+			);
+			name = NSLogger;
 			sourceTree = "<group>";
 		};
 		10A20C271DED7949008D34F2 = {
@@ -142,6 +158,7 @@
 		10A20C4A1DED7FE2008D34F2 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				108E30C61DF95B4000D4EEC6 /* NSLogger */,
 				107990531DEE765E002A727E /* NSData+Hex.h */,
 				107990541DEE765E002A727E /* NSData+Hex.m */,
 				10A20C4B1DED8025008D34F2 /* TaPassSDK(IOS) */,
@@ -314,6 +331,7 @@
 				107990441DEE6545002A727E /* BaseNavigationController.m in Sources */,
 				107990551DEE765E002A727E /* NSData+Hex.m in Sources */,
 				1079904E1DEE6806002A727E /* ListSelectView.m in Sources */,
+				108E30CB1DF95B5000D4EEC6 /* LoggerClient.m in Sources */,
 				10A20C3B1DED7949008D34F2 /* MainViewController.m in Sources */,
 				107990581DEE8135002A727E /* NFCCardReader.m in Sources */,
 				10A20C381DED7949008D34F2 /* AppDelegate.m in Sources */,

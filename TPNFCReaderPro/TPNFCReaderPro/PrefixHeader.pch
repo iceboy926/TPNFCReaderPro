@@ -19,5 +19,6 @@
 #import "Macros.h"
 #import "Header.h"
 #import "BaseNavigationController.h"
+#import "NSLogger.h"
 
 #endif /* PrefixHeader_pch */
